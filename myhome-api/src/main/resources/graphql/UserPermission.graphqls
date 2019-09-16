@@ -1,0 +1,16 @@
+enum UserPermissionType {
+    GRANT_GLOBAL,
+    GRABT_AUTH
+}
+
+type UserPermission {
+    id: ID
+    name: String
+    type: UserPermissionType
+}
+
+input UserPermissionDto {
+    id: ID
+    name: String!
+    type: UserPermissionType!
+}

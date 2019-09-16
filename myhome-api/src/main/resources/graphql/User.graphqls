@@ -1,0 +1,19 @@
+type User {
+    id: ID
+    email: String
+    cellPhone: Int
+    roles: [UserRole]
+    creationDateFunc(value: String): String
+}
+
+input UserRolesInput {
+    id: ID!
+}
+
+input UserDto {
+    id: ID
+    email: String!
+    password: String!
+    cellPhone: Int!
+    roles: [UserRolesInput!]!
+}

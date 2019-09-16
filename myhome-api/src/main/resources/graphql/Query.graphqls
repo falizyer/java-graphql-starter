@@ -1,0 +1,20 @@
+type Query {
+    users(count: Int = -1, offset: Int = 0): [User]
+    user(userId: ID): User
+}
+
+type Mutation {
+    createUser(dto: UserDto!): User!
+    updateUser(userId: ID!, user: UserDto!): User!
+    deleteUser(userId: ID!): User
+}
+
+type Subscription {
+
+}
+
+schema {
+    query: Query
+    mutation: Mutation
+    subscription: Subscription
+}

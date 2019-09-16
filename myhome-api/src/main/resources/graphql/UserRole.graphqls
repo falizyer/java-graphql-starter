@@ -1,0 +1,17 @@
+type UserRole {
+    id: ID
+    name: String
+    creationDate: Int
+    updateDate: Int
+    permissions: [UserPermission]
+}
+
+input UserRolePermissionInput {
+    id: ID!
+}
+
+input UserRoleDto {
+    id: ID
+    name: String!
+    permissions: [UserRolePermissionInput!]!
+}
